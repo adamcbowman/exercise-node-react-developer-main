@@ -28,11 +28,13 @@ const CommitDetails = ({ url, full_name }) => {
   }, [url]);
 
   // sort commits by date
-  const sortedCommits = commits.sort((a, b) => {
-    return (
-      new Date(b.commit.committer.date) - new Date(a.commit.committer.date)
-    );
-  });
+  const sortedCommits = commits.length
+    ? commits.sort((a, b) => {
+        return (
+          new Date(b.commit.committer.date) - new Date(a.commit.committer.date)
+        );
+      })
+    : [];
 
   return (
     <div className="Commit-details">
@@ -47,6 +49,7 @@ const CommitDetails = ({ url, full_name }) => {
           {sortedCommits[0].commit.message}
         </>
       )}
+      {!loading && !commits.length && <div>Commit details not found</div>}
       <br />
       <ReactMarkdown children={markdown} />
     </div>
