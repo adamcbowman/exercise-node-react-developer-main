@@ -1,3 +1,5 @@
+-- remaining to do was error handling but I hit the 4 hour limit. 
+
 silverorange Intermediate Developer Assessment
 ==============================================
 
