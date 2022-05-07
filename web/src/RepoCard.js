@@ -17,7 +17,7 @@ const RepoCard = ({ repo }) => {
           {repo.language}, Forks: {repo.forks}
         </div>
         {showDetails && (
-          <CommitDetails url={repo.commits_url} fullName={repo.full_name} />
+          <CommitDetails url={repo.commits_url} full_name={repo.full_name} />
         )}
       </button>
     </li>
