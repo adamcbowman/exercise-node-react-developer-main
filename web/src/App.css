@@ -45,6 +45,12 @@
   margin: 5px;
 }
 
+.Commit-details {
+  background-color: bisque;
+  color: #282c34;
+  padding: 5px;
+}
+
 button {
   background-color: #282c34;
   color: white;
@@ -57,5 +63,5 @@ button {
 .Title {
   font-size: 1.5em;
   font-weight: bold;
-  
+
 }
