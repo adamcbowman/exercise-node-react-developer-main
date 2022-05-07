@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -28,11 +23,39 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Repo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 5px;
+  list-style: none;
+}
+
+.Repo-card {
+  padding: 2px;
+  margin: 5px;
+  min-width: 75vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Repo-item {
+  margin: 5px;
+}
+
+button {
+  background-color: #282c34;
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Title {
+  font-size: 1.5em;
+  font-weight: bold;
+  
 }
