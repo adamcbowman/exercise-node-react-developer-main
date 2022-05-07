@@ -5,8 +5,15 @@ import { useState, useEffect } from 'react';
 const CommitDetails = ({ url, full_name }) => {
   const [loading, setLoading] = useState(true);
   const [commits, setCommits] = useState([]);
+  const [markdown, setMarkdown] = useState('');
 
   const markdownUrl = `https://raw.githubusercontent.com/${full_name}/master/README.md`;
+
+  useEffect(() => {
+    fetch(markdownUrl)
+      .then((response) => response.text())
+      .then((text) => setMarkdown(text));
+  }, [markdownUrl]);
 
   useEffect(() => {
     // get commits from url
@@ -41,7 +48,7 @@ const CommitDetails = ({ url, full_name }) => {
         </>
       )}
       <br />
-      <ReactMarkdown children={markdownUrl} />
+      <ReactMarkdown children={markdown} />
     </div>
   );
 };
